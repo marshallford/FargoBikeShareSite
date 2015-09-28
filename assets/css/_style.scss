@@ -1,0 +1,95 @@
+/* ===== Typography ===== */
+
+/* Font Face example
+@font-face {
+  font-family: 'FONT-NAME';
+  src: url('.eot');
+  src: url('.eot?#iefix') format('eot'),
+  url('.svg') format('svg'),
+  url('.woff') format('woff'),
+  url('.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+body {
+  font: normal 16px/1.6 Helvetica;
+  color: #222;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+h1,h2,h3,h4,h5,h6 {
+
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0); // iOS Bug Fix
+  color: #2980b9;
+  &:hover {
+    outline:none;
+    border:none;
+    text-decoration: none;
+  }
+  &:active, &:focus, &:visited {
+    outline: none;
+    border: none;
+    text-decoration: none;
+  }
+  &:visited {
+
+  }
+}
+
+/* ===== Layout ===== */
+.page-wrap {
+
+}
+.container {
+  width: 92%;
+  margin: 0 auto;
+}
+
+.bikeShare {
+  table {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #CCCCCC;
+  }
+  th:first-child, td:first-child {
+    padding-left: 0;
+  }
+  th:last-child, td:last-child {
+    padding-right: 0;
+  }
+}
+header {
+  vertical-align: middle;
+  display: inline-block;
+  .update {
+    background: #CCCCCC;
+    padding: 5px;
+    border-radius: 2px;
+    float: left;
+    margin: 20px 0;
+    text-transform: uppercase;
+    color: inherit;
+    &:hover {
+      background: darken(#CCCCCC, 5%);
+    }
+  }
+  h1 {
+    margin: 20px 15px 20px 0;
+    line-height: 1;
+    float: left;
+  }
+}
+.notify {
+  p {
+    font-style: italic;
+  }
+}

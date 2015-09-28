@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fargo Bike Share</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <script src="/assets/js/bundle.js"></script>
+  </head>
+  <body ng-app="App">
+    <div class="page-wrap">
+      <div class="container" ng-controller="bikeShare">
+        <header class="group">
+          <h1>Fargo Bike Share</h1>
+          <a href="" ng-click="getData();" class="update">update</a>
+        </header>
+        <div class="notify" ng-class="{'hidden' : !updating}">
+          <p>updating...</p>
+        </div>
+        <div class="bikeShare">
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Bikes</th>
+            <th>Docks</th>
+          </tr>
+          <tr ng-repeat="bikeShare in data">
+            <td>{{ bikeShare.Name }}</td>
+            <td>{{ bikeShare.BikesAvailable }}</td>
+            <td>{{ bikeShare.DocksAvailable }}/{{ bikeShare.TotalDocks }}</td>
+          </tr>
+        </table>
+      </div>
+      </div>
+    </div> <!-- page-wrap -->
+  </body>
+</html>

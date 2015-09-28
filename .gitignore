@@ -1,0 +1,37 @@
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# OSX
+.DS_Store
+
+# Sass
+/.sass-cache
+
+# Jekyll/Hugo Site Directory
+/_site
+/public
+
+# Generated CSS Files
+*.css
+
+# Node Modules
+/node_modules
+
+# Node Error Log
+npm-debug.log
+
+# CSS Map Files ?
+*.map
+
+# bundled js
+bundle.js
+
+# Ruby
+Gemfile.lock

@@ -1,0 +1,1 @@
+exclude: ['node_modules', 'gulpfile.js', 'LICENSE.md', 'README.md', 'package.json', '*.scss', 'clean.sh']
