@@ -85,11 +85,12 @@ gulp.task('reload', function () {
   browser_sync.reload();
 });
 
-// Clean before full build
+// clean and compress before full build
 gulp.task('clean', function () {
   gulp.src('assets/js/bundle.js')
   .pipe(plumber())
-  .pipe(uglify({ mangle: false })); // angular breaks without mangle=false
+  .pipe(uglify({ mangle: false })) // angular breaks without mangle=false
+  .pipe(gulp.dest('assets/js'));
   return del([
     'assets/**/*.map',
   ]);
