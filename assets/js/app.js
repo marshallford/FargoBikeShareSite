@@ -4,7 +4,7 @@ app.controller('bikeShare', function($scope,$http,$timeout) {
   $scope.updating = false;
   $scope.getData = function(){
       $scope.updating = true;
-      $http.get('http://localhost:9292/api/v1/all').
+      $http.get('http://fargobikeshare.marshallford.me/api/v1/all').
         success(function(data, status, headers, config) {
           $scope.data = data;
         }).
@@ -15,6 +15,6 @@ app.controller('bikeShare', function($scope,$http,$timeout) {
           $scope.updating = false;
         }, 300);
   };
-  
+
   $scope.getData();
 });
